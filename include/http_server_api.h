@@ -34,6 +34,8 @@ namespace http
     // Static instance of the HTTP server API.
     static std::unique_ptr<http_server> s_server_api;
      /// Number of registered listeners;
-    static pplx::atomic_long s_registrations;
+    static pplx::details::atomic_long s_registrations;
+    // Static only class. No creation.
+    http_server_api();
   };
 }
