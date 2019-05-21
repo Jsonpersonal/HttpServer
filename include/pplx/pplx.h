@@ -17,5 +17,16 @@
 #endif
 #endif // _WIN32
 
+// Use PPLx
+#ifdef _WIN32
+#include "pplx/pplxwin.h"
+#elif defined(__APPLE__)
+#undef _PPLXIMP
+#define _PPLXIMP
+#include "pplx/pplxlinux.h"
+#else
+#include "pplx/pplxlinux.h"
+#endif // _WIN32
+
 #endif //_PPLX_H
 
