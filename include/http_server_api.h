@@ -8,7 +8,6 @@
 #pragma once
 #include "memory.h"
 #include "cpprest/http_listener.h"
-typedef long volatile atomic_long;
 namespace http
 {
   class http_server;
@@ -35,6 +34,6 @@ namespace http
     // Static instance of the HTTP server API.
     static std::unique_ptr<http_server> s_server_api;
      /// Number of registered listeners;
-    static pplx::details::atomic_long s_registrations;
+    static pplx::atomic_long s_registrations;
   };
 }
