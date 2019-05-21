@@ -36,6 +36,10 @@
 #define _pplx_cdecl __cdecl
 #endif
 
+namespace pplx
+{
+  typedef void (_pplx_cdecl * TaskProc_t)(void *);
+}// namespace pplx
 
 
 #endif // _PPLXINTERFACE_H
