@@ -16,7 +16,10 @@ namespace web{ namespace http{
 /// </summary>
 class http_server
 {
-
+ public:
+  virtual ~http_server(){};
+  
+  
 };
 }
 }
